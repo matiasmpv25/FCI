@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCI: Global Finance, Reset</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a1a;
+            color: #e0e0e0;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(10, 10, 26, 0.9), rgba(10, 10, 26, 1)), url('https://placehold.co/1920x1080/0a0a1a/e0e0e0?text=Global+Financial+Network') no-repeat center center;
+            background-size: cover;
+        }
+        .brand-gradient-text {
+            background: linear-gradient(90deg, #facc15, #fbbf24, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        .cta-button-primary {
+            background: linear-gradient(90deg, #facc15, #fbbf24);
+            transition: all 0.3s ease;
+        }
+        .cta-button-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(250, 204, 21, 0.5);
+        }
+        .cta-button-secondary {
+            background-color: transparent;
+            border: 2px solid #a78bfa;
+            color: #a78bfa;
+            transition: all 0.3s ease;
+        }
+        .cta-button-secondary:hover {
+            background-color: #a78bfa;
+            color: #111827;
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(167, 139, 250, 0.5);
+        }
+        .glass-card {
+            background-color: rgba(23, 23, 38, 0.7);
+            border: 1px solid rgba(167, 139, 250, 0.2);
+            backdrop-filter: blur(12px);
+        }
+        /* Modal Styles */
+        .modal.hidden { opacity: 0; pointer-events: none; }
+        .modal { transition: opacity 0.3s ease-in-out; }
+        .modal .modal-content { transition: transform 0.3s ease-in-out; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-40 bg-black/30 backdrop-blur-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="https://i.postimg.cc/YhRn6M51/IMG-4330.jpg" alt="FCI Logo" class="h-10 w-10 rounded-full">
+                <span class="text-xl font-bold text-white">FCI</span>
+            </div>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#the-institution" class="text-gray-300 hover:text-yellow-400 transition">The Institution</a>
+                <a href="#the-problem" class="text-gray-300 hover:text-yellow-400 transition">The Problem</a>
+                <a href="#the-solution" class="text-gray-300 hover:text-yellow-400 transition">The Solution</a>
+                <a href="#security" class="text-gray-300 hover:text-yellow-400 transition">Security</a>
+                <a href="#founders" class="text-yellow-400 font-bold hover:text-yellow-300 transition">Founders</a>
+            </nav>
+            <button id="openSaleModalBtnHero" class="cta-button-primary text-gray-900 font-bold py-2 px-5 rounded-full">Participate</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg min-h-screen flex items-center justify-center text-center">
+            <div class="container mx-auto px-6">
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-tight mb-4">Global Finance, <span class="brand-gradient-text">Reset.</span></h1>
+                <p class="max-w-3xl mx-auto text-lg md:text-2xl text-gray-300 mb-10">Introducing the International Crypto Fund: a new global financial architecture, built on transparency and <span class="font-bold text-yellow-100/90">fully backed by reserves in prestigious banks</span>.</p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <button id="openSaleModalBtn" class="cta-button-primary w-full sm:w-auto text-gray-900 font-bold py-4 px-10 rounded-full text-lg">Access Token Sale</button>
+                    <button id="openInvestorModalBtn" class="cta-button-secondary w-full sm:w-auto font-bold py-4 px-10 rounded-full text-lg">I'm a Founding Investor</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Who We Are Section -->
+        <section id="the-institution" class="py-20 sm:py-32">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16"><h2 class="text-4xl md:text-5xl font-bold text-white">A New Institutional Paradigm</h2><p class="mt-4 max-w-3xl mx-auto text-lg text-gray-400">We are not a company, a hedge fund, or a simple DAO. We are the evolution of global financial institutions.</p></div>
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-10">
+                        <!-- Identity -->
+                        <div class="flex items-start space-x-4"><div class="flex-shrink-0 text-purple-400"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l-7 10h14L12 2z"></path><path d="M5 22l7-10 7 10H5z"></path></svg></div><div><h3 class="text-2xl font-bold text-white mb-1">What We Are</h3><p class="text-gray-400">We are a next-generation **International Crypto Fund**. The first financial institution to merge the agility and transparency of blockchain technology with the rigor and expertise of the highest level of economic advisory.</p></div></div>
+                        <!-- Vision -->
+                        <div class="flex items-start space-x-4"><div class="flex-shrink-0 text-purple-400"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div><div><h3 class="text-2xl font-bold text-white mb-1">Our Vision</h3><p class="text-gray-400">To be the new global standard for stability and development. The first choice for nations seeking not a bailout, but a true alliance to build a prosperous, sovereign, and resilient future.</p></div></div>
+                    </div>
+                    <div>
+                        <img src="https://i.postimg.cc/YhRn6M51/IMG-4330.jpg" class="rounded-xl shadow-2xl max-w-sm h-auto mx-auto" alt="Official FCI Logo">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Problem Section -->
+        <section id="the-problem" class="py-20 sm:py-32 bg-black/20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16"><h2 class="text-4xl md:text-5xl font-bold text-white">The Problem: An <span class="brand-gradient-text">Obsolete & Broken</span> System</h2><p class="mt-4 max-w-3xl mx-auto text-lg text-gray-400">The current financial model is slow, opaque, and often worsens the crises it aims to solve. Instability is the norm, not the exception.</p></div>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="glass-card p-8 rounded-xl"><div class="text-5xl font-bold text-red-400 mb-2">>300%</div><h3 class="text-xl font-bold text-white">Global Debt to GDP</h3><p class="text-gray-400">An unsustainable level that threatens the economic stability of all nations.</p></div>
+                    <div class="glass-card p-8 rounded-xl"><div class="text-5xl font-bold text-blue-400 mb-2">-75%</div><h3 class="text-xl font-bold text-white">Trust in Institutions</h3><p class="text-gray-400">A lack of transparency and bureaucracy have eroded faith in traditional organizations.</p></div>
+                    <div class="glass-card p-8 rounded-xl"><div class="text-5xl font-bold text-yellow-400 mb-2">Years</div><h3 class="text-xl font-bold text-white">Rescue Timelines</h3><p class="text-gray-400">Countries in crisis wait months or years for aid that often arrives too late and with draconian conditions.</p></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- The Solution Section -->
+        <section id="the-solution" class="py-20 sm:py-32">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-20"><h2 class="text-4xl md:text-5xl font-bold text-white">The Solution: <span class="brand-gradient-text">Intelligent Capital Alliances</span></h2><p class="mt-4 max-w-3xl mx-auto text-lg text-gray-400">We don't just lend money. We deploy capital alongside an elite team to guarantee success. We are partners in prosperity, and this is how we mitigate risk where others fail.</p></div>
+                <div class="grid lg:grid-cols-3 gap-8 text-center">
+                    <!-- Step 1 -->
+                    <div class="glass-card p-8 rounded-xl"><div class="mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="mx-auto text-purple-400" stroke-width="1.5"><path d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6z"></path><circle cx="12" cy="12" r="2"></circle></svg></div><h3 class="text-2xl font-bold text-white mb-2">Tailored Advisory</h3><p class="text-gray-400">Our Council of Economists designs customized and viable reform plans, avoiding the one-size-fits-all impositions that have failed in the past.</p></div>
+                     <!-- Step 2 -->
+                    <div class="glass-card p-8 rounded-xl"><div class="mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="mx-auto text-purple-400" stroke-width="1.5"><path d="M18 9l-6 6-6-6"></path></svg></div><h3 class="text-2xl font-bold text-white mb-2">Continuous Support</h3><p class="text-gray-400">We integrate as a strategic partner, providing constant support during the implementation of reforms to ensure objectives are met.</p></div>
+                     <!-- Step 3 -->
+                    <div class="glass-card p-8 rounded-xl"><div class="mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="mx-auto text-purple-400" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path><path d="M14 2v6h6"></path><path d="M16 13H8"></path><path d="M16 17H8"></path><path d="M10 9H8"></path></svg></div><h3 class="text-2xl font-bold text-white mb-2">Transparent Auditing</h3><p class="text-gray-400">We conduct periodic and public audits on the use of funds and the progress of reforms, all traceable on the blockchain for absolute clarity.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security Section -->
+        <section id="security" class="py-20 sm:py-32 bg-black/20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16"><h2 class="text-4xl md:text-5xl font-bold text-white">Unshakeable <span class="brand-gradient-text">Security & Trust</span></h2><p class="mt-4 max-w-3xl mx-auto text-lg text-gray-400">Our architecture is built on two non-negotiable pillars of security and transparency.</p></div>
+                <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+                    <div class="text-center glass-card p-8 rounded-xl"><div class="mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="mx-auto text-yellow-400" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div><h3 class="text-3xl font-bold mb-2">Reserves in Prestigious Banks</h3><p class="text-gray-400">All of the fund's backing capital is held and insured in the world's most secure banking institutions, completely isolated from any market risk.</p></div>
+                    <div class="text-center glass-card p-8 rounded-xl"><div class="mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="mx-auto text-yellow-400" stroke-width="1.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg></div><h3 class="text-3xl font-bold mb-2">Audits by Elite Firms</h3><p class="text-gray-400">We partner with the most prestigious auditing firms to publicly and in real-time verify both our capital reserves and the progress of the projects we finance.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Founders Section -->
+        <section id="founders" class="py-20 sm:py-32 investor-section">
+            <div class="container mx-auto px-6">
+                 <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-4xl md:text-5xl font-black text-white leading-tight mb-4">The <span class="brand-gradient-text">Founders' Circle</span></h2>
+                    <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">We are seeking visionaries, strategists, and pioneers who not only want to invest, but to co-create the future of finance. This is your invitation to take a seat at the board table of the next financial revolution.</p>
+                    <button id="openInvestorModalBtnFounders" class="cta-button-secondary font-bold py-4 px-10 rounded-full text-lg">Request Access to the Circle</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Modals -->
+    <!-- Sale Dates Modal -->
+    <div id="saleModal" class="modal fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4"><div class="modal-content bg-gray-900/80 max-w-md w-full p-6 sm:p-8 rounded-2xl border-2 border-yellow-400/50 shadow-2xl shadow-purple-500/20 transform scale-95"><div class="flex justify-between items-center mb-6"><h3 class="text-xl sm:text-2xl font-bold text-white brand-gradient-text">Key Sale Dates</h3><button id="closeSaleModalBtn" class="text-gray-500 hover:text-white text-4xl leading-none">&times;</button></div><div><p class="text-gray-300 mb-6">Get ready to be part of the financial future! These are the official dates for acquiring our tokens.</p><div class="space-y-5"><div class="bg-black/20 p-4 rounded-lg flex items-center space-x-4"><div class="text-purple-400"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div><div><p class="font-bold text-white">Presale</p><p class="text-lg font-mono text-purple-300">July 30, 2025</p></div></div><div class="bg-black/20 p-4 rounded-lg flex items-center space-x-4"><div class="text-yellow-400"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"></path><path d="M12 22.31l-5.66-5.66a8 8 0 1111.31 0z"></path></svg></div><div><p class="font-bold text-white">Public Launch</p><p class="text-lg font-mono text-yellow-300">August 15, 2025</p></div></div></div><p class="text-sm text-gray-400 mt-6 text-center">Mark your calendar. The opportunity to redefine global finance is approaching.</p></div></div></div>
+    <!-- Investor Modal -->
+    <div id="investorModal" class="modal fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4"><div class="modal-content bg-gray-900/80 max-w-lg w-full p-6 sm:p-8 rounded-2xl border-2 border-yellow-400/50 shadow-2xl shadow-purple-500/20 transform scale-95"><div class="flex justify-between items-center mb-6"><h3 class="text-xl sm:text-2xl font-bold text-white brand-gradient-text">Access to the Founders' Circle</h3><button id="closeInvestorModalBtn" class="text-gray-500 hover:text-white text-4xl leading-none">&times;</button></div><div><p class="text-gray-300 mb-4">To request participation as a founding investor, please send a formal email. Your message will initiate the verification process.</p><div class="bg-black/20 p-4 rounded-lg mb-6"><p class="text-gray-200 font-semibold mb-2">Include in your email:</p><ul class="list-disc list-inside text-gray-400 space-y-2"><li>Introduction of yourself or your entity.</li><li>Motivation and strategic interest in the FCI.</li><li>The investment capital you are considering.</li></ul></div><a href="mailto:fondocriptointernacional@gmail.com" class="email-button inline-flex w-full items-center justify-center space-x-3 p-3 rounded-xl group"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-400 group-hover:text-yellow-400 transition-colors duration-300 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg><span class="font-mono text-sm sm:text-base text-gray-200 group-hover:text-white transition-colors duration-300" style="word-break: break-all;">fondocriptointernacional@gmail.com</span></a></div></div></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const setupModal = (modalId, openBtnIds, closeBtnId) => {
+                const modal = document.getElementById(modalId);
+                const closeBtn = document.getElementById(closeBtnId);
+                if (!modal || !closeBtn) return;
+                const modalContent = modal.querySelector('.modal-content');
+                const openModal = () => {
+                    modal.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                    setTimeout(() => { modal.style.opacity = '1'; modalContent.style.transform = 'scale(1)'; }, 10);
+                };
+                const closeModal = () => {
+                    modal.style.opacity = '0';
+                    modalContent.style.transform = 'scale(0.95)';
+                    document.body.style.overflow = 'auto';
+                    setTimeout(() => { modal.classList.add('hidden'); }, 300);
+                };
+                openBtnIds.forEach(btnId => {
+                    const openBtn = document.getElementById(btnId);
+                    if(openBtn) openBtn.addEventListener('click', openModal);
+                });
+                closeBtn.addEventListener('click', closeModal);
+                modal.addEventListener('click', (event) => { if (event.target === modal) closeModal(); });
+                document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && !modal.classList.contains('hidden')) closeModal(); });
+            };
+            setupModal('saleModal', ['openSaleModalBtn', 'openSaleModalBtnHero'], 'closeSaleModalBtn');
+            setupModal('investorModal', ['openInvestorModalBtn', 'openInvestorModalBtnFounders'], 'closeInvestorModalBtn');
+        });
+    </script>
+</body>
+</html>
